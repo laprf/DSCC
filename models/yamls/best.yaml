@@ -1,0 +1,33 @@
+img_size: 256
+num_classes: 24
+in_channels: 32
+soft_label: True
+Clustering:
+  layers: [3, 4]
+  embed_dims: [128, 256]
+  hidden_dims: [64, 192]
+  mlp_ratios: [4, 4]
+  proposal: 16
+  remain_tokens: [128]
+  drop_rate: 0.0
+  drop_path_rate: 0.0
+  layer_scale: False
+  hsi: True
+  sdf: True
+  semantic: True
+  k: 9
+TokenMerger:
+  hsi: True
+  sdf: True
+  semantic: True
+  k: 9
+ViT:
+  Mamba: True
+  hidden_size: 256
+  patch_size: 1
+  depth: 4
+  num_heads: 4
+  dim_head: 96
+  mlp_dim: 1024
+  dropout: 0.1
+  attention_dropout: 0.1
